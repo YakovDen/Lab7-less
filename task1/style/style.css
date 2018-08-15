@@ -1,0 +1,130 @@
+.boxsize {
+  box-sizing: border-box;
+}
+.center {
+  align-items: center;
+  justify-content: center;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: Arial, Verdana, sans-serif;
+  margin: 1% 0;
+  height: 100%;
+}
+.wrapper {
+  min-width: 1000px;
+  min-width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  overflow: hidden;
+}
+.header {
+  padding: 4% 8%;
+  max-width: 100%;
+  background: #ecf0f1;
+  font-size: 30px;
+  text-align: center;
+  box-sizing: border-box;
+}
+.block {
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 3% 8%;
+  box-sizing: border-box;
+  justify-content: flex-start;
+  background: #bdc3c7;
+  border: 1px solid red;
+}
+.block .bl {
+  display: flex;
+  width: 16%;
+  min-height: 160px;
+  margin: 1.5% 1.5%;
+  border: 1px solid green;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  font-size: 75px;
+}
+.block .bl.square1 {
+  background-color: #f2f2f2;
+}
+.block .bl.square2 {
+  background-color: #dedede;
+}
+.block .bl.square3 {
+  background-color: #d3d3d3;
+}
+.block .bl.square4 {
+  background-color: #c9c9c9;
+}
+.block .bl.squar51 {
+  background-color: #bfbfbf;
+}
+.block .bl.square6 {
+  background-color: #b5b5b5;
+}
+.block .bl.square7 {
+  background-color: #ababab;
+}
+.block .bl.square8 {
+  background-color: #a0a0a0;
+}
+.block .bl.square9 {
+  background-color: #969696;
+}
+/* For medium screen / desktop */
+@media screen and (min-width: 750px) and (max-width: 1000px) {
+  .header {
+    padding: 6% 0;
+    text-align: center;
+  }
+  .block {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .block .bl {
+    flex-basis: 27%;
+    height: 220px;
+  }
+}
+/*For tablet */
+@media screen and (min-width: 500px) and (max-width: 750px) {
+  .header {
+    padding: 4% 0%;
+    font-size: 35px;
+    text-align: center;
+  }
+  .block {
+    width: 100%;
+    padding: 3% 1%;
+    justify-content: space-between;
+  }
+  .block .bl {
+    flex-basis: 45%;
+    height: 315px;
+  }
+}
+/* For extra small screen / phone */
+@media screen and (min-width: 0) and (max-width: 500px) {
+  .header {
+    padding: 2% 0%;
+    font-size: 35px;
+    text-align: center;
+  }
+  .block {
+    width: 100%;
+    padding: 1% 0;
+    justify-content: center;
+  }
+  .block .bl {
+    flex-basis: 95%;
+    height: 455px;
+  }
+}

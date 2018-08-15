@@ -1,0 +1,175 @@
+@header-color: #ecf0f1;
+@block-color:  #bdc3c7;
+@square-color:#f2f2f2;
+@title-body:Arial, Verdana, sans-serif; 
+@title-1:30px;
+
+// Large screen / wide desktop
+@screen-lg-min: 1000px;
+
+// Medium screen / desktop
+@screen-md-min: 750px;
+
+// Small screen / tablet
+@screen-sm-min: 500px;
+
+// Extra small screen / phone
+@screen-xs-min: 0;
+
+.boxsize{
+  box-sizing: border-box;
+}
+
+.center{
+  align-items: center;
+  justify-content: center;
+}
+
+* {
+    padding: 0;
+    margin: 0;   
+  }
+  body {
+    font-family: @title-body; 
+    margin: 1% 0;
+    height: 100%;    
+  }
+  
+  .wrapper{     
+    min-width: @screen-lg-min;   
+    min-width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 20px;  
+    overflow: hidden;    
+  }
+
+  .header{ 
+    padding: 4% 8%;  
+    max-width: 100%;   
+    background: @header-color;    
+    font-size: @title-1;
+    text-align: center; 
+    .boxsize;     
+  }
+  
+      .block{
+           max-width: 100%;        
+            height: 100%; 
+            display: flex; 
+            flex-wrap: wrap;               
+            padding:3% 8%; 
+            .boxsize;           
+            justify-content: flex-start;
+            background: @block-color;
+            border: 1px solid red;
+
+               .bl{
+                  display: flex;                                  
+                  width: 16%;
+                  min-height: 160px;                                  
+                  margin: 1.5% 1.5%; 
+                  border: 1px solid green;
+                  .boxsize;  
+                  .center;
+                  font-size: @title-1*2.5; 
+
+                      &.square1{
+                        background-color:@square-color;
+                      }
+                      &.square2{
+                        background-color:darken(@square-color,8%);
+                      }
+                      &.square3{
+                        background-color:darken(@square-color,12%);
+                      }
+                      &.square4{
+                        background-color:darken(@square-color,16%);
+                      }
+                      &.squar51{
+                        background-color:darken(@square-color,20%);
+                      }
+                      &.square6{
+                        background-color:darken(@square-color,24%);
+                      }
+                      &.square7{
+                        background-color:darken(@square-color,28%);
+                      }
+                      &.square8{
+                        background-color:darken(@square-color,32%);
+                      }
+                      &.square9{
+                        background-color:darken(@square-color,36%);
+                      }
+
+                }             
+
+       }
+
+
+
+  /* For medium screen / desktop */
+@media screen and (min-width: @screen-md-min) and (max-width: @screen-lg-min){
+ 
+     .header{    
+       padding: 6% 0;        
+       text-align: center;
+      }
+
+      .block{          
+          width: 100%;
+          justify-content: space-between;
+         
+              .bl{                           
+                flex-basis: 27%;height: 220px;             
+               // background: red;
+              }
+      } 
+   
+}
+
+/*For tablet */
+@media screen and (min-width: @screen-sm-min) and (max-width: @screen-md-min){
+
+      .header{
+        padding: 4% 0%;
+        font-size: 35px;
+        text-align: center;
+    }       
+        .block{          
+            width: 100%;           
+            padding: 3% 1%;               
+            justify-content: space-between;           
+
+                .bl{                 
+                  flex-basis: 45%;height: 315px;             
+                  //background: green;
+                }
+        }  
+  
+}
+
+/* For extra small screen / phone */
+@media screen and (min-width: @screen-xs-min) and (max-width: @screen-sm-min){
+
+     .header{      
+        padding: 2% 0%;
+        font-size: 35px;
+        text-align: center;       
+    } 
+
+    .block{        
+        width: 100%;
+        padding: 1% 0;                    
+        justify-content: center;       
+
+            .bl{   
+              flex-basis: 95%;height: 455px;                      
+             // background: blue;
+            }
+    }
+
+}
+
+
+
