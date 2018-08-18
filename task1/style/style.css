@@ -41,7 +41,7 @@ body {
   background: #bdc3c7;
   border: 1px solid red;
 }
-.block .bl {
+.block .square {
   display: flex;
   width: 16%;
   min-height: 160px;
@@ -52,31 +52,31 @@ body {
   justify-content: center;
   font-size: 75px;
 }
-.block .bl.square1 {
-  background-color: #f2f2f2;
+.block .bl1 {
+  background-color: #e8e8e8;
 }
-.block .bl.square2 {
+.block .bl2 {
   background-color: #dedede;
 }
-.block .bl.square3 {
+.block .bl3 {
   background-color: #d3d3d3;
 }
-.block .bl.square4 {
+.block .bl4 {
   background-color: #c9c9c9;
 }
-.block .bl.squar51 {
+.block .bl5 {
   background-color: #bfbfbf;
 }
-.block .bl.square6 {
+.block .bl6 {
   background-color: #b5b5b5;
 }
-.block .bl.square7 {
+.block .bl7 {
   background-color: #ababab;
 }
-.block .bl.square8 {
+.block .bl8 {
   background-color: #a0a0a0;
 }
-.block .bl.square9 {
+.block .bl9 {
   background-color: #969696;
 }
 /* For medium screen / desktop */
@@ -92,6 +92,7 @@ body {
   .block .bl {
     flex-basis: 27%;
     height: 220px;
+    background: red;
   }
 }
 /*For tablet */

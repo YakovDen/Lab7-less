@@ -64,7 +64,7 @@
             background: @block-color;
             border: 1px solid red;
 
-               .bl{
+               .square{
                   display: flex;                                  
                   width: 16%;
                   min-height: 160px;                                  
@@ -72,42 +72,24 @@
                   border: 1px solid green;
                   .boxsize;  
                   .center;
-                  font-size: @title-1*2.5; 
-
-                      &.square1{
-                        background-color:@square-color;
-                      }
-                      &.square2{
-                        background-color:darken(@square-color,8%);
-                      }
-                      &.square3{
-                        background-color:darken(@square-color,12%);
-                      }
-                      &.square4{
-                        background-color:darken(@square-color,16%);
-                      }
-                      &.squar51{
-                        background-color:darken(@square-color,20%);
-                      }
-                      &.square6{
-                        background-color:darken(@square-color,24%);
-                      }
-                      &.square7{
-                        background-color:darken(@square-color,28%);
-                      }
-                      &.square8{
-                        background-color:darken(@square-color,32%);
-                      }
-                      &.square9{
-                        background-color:darken(@square-color,36%);
-                      }
-
-                }             
-
-       }
-
-
-
+                  font-size: @title-1*2.5;
+                } 
+                    
+                & { 
+                    @square-count:9;                    
+                    @square-name: bl;
+                    @degree:0%;
+                      .generate-square(@i:1,@degree:4%) when (@i =< @square-count){
+                        .@{square-name}@{i} {
+                            background-color:darken(@square-color,@degree);
+                        }
+                          .generate-square(@i+1,@degree+4);                                                 
+                        }
+                      .generate-square();
+                }
+                     
+        }   
+         
   /* For medium screen / desktop */
 @media screen and (min-width: @screen-md-min) and (max-width: @screen-lg-min){
  
@@ -122,7 +104,7 @@
          
               .bl{                           
                 flex-basis: 27%;height: 220px;             
-               // background: red;
+                background: red;
               }
       } 
    
